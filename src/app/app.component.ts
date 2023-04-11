@@ -17,121 +17,150 @@ filterForm: FormGroup;
     this.filterFields = [
 
       {
-        column1: 'Name',
+        column1: 'TaskName',
         column2: 'REQUIRED',
         column3: 'string',
-        key: "Name",
-        title: "Name of the dataset.",
+        key: "TaskName",
+        title: "Name of the task. No two tasks should have the same name. The task label included in the file name is derived from this 'TaskName' field by removing all non-alphanumeric characters (that is, all except those matching [0-9a-zA-Z]). For example 'TaskName' 'faces n-back' will correspond to task label facesnback. A RECOMMENDED convention is to name resting state task using labels beginning with rest.",
         type: "text"
       },
       {
-        column1: 'BIDSVersion',
-        column2: 'REQUIRED',
+        column1: 'InstitutionName',
+        column2: 'RECOMMENDED',
         column3: 'string',
-        key: "BIDSVersion",
-        title: "The version of the BIDS standard that was used.",
+        key: "InstitutionName",
+        title: "The name of the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
-        column1: 'HEDVersion',
+        column1: 'InstitutionAddress',
         column2: 'RECOMMENDED',
         column3: 'string or array of strings',
-        key: "BIDSVersion",
-        title: "If HED tags are used: The version of the HED schema used to validate HED tags for study. May include a single schema or a base schema and one or more library schema.",
+        key: "InstitutionAddress",
+        title: "The address of the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
-        column1: 'DatasetLinks',
-        column2: 'REQUIRED if BIDS URIs are used',
+        column1: 'InstitutionalDepartmentName',
+        column2: 'RECOMMENDED',
         column3: 'object of string',
-        key: "DatasetLinks",
-        title: "Used to map a given <dataset-name> from a BIDS URI of the form bids:<dataset-name>:path/within/dataset to a local or remote location. The <dataset-name>:  (an empty string) is a reserved keyword that MUST NOT be a key in DatasetLinks (example: bids::path/within/dataset).",
+        key: "InstitutionalDepartmentName",
+        title: "The department in the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
-        column1: 'DatasetType',
+        column1: 'Manufacturer',
         column2: 'RECOMMENDED',
         column3: 'string',
-        key: "DatasetType",
-        title: "The interpretation of the dataset. For backwards compatibility, the default value is ‘raw’. Must be one of: ‘raw’, ‘derivative’.",
+        key: "Manufacturer",
+        title: "Manufacturer of the equipment that produced the measurements. For MEG scanners, this must be one of: 'CTF', 'Elekta/Neuromag', 'BTi/4D', 'KIT/Yokogawa', 'ITAB', 'KRISS', 'Other'. See the MEG Systems Appendix for preferred names.",
         type: "text"
       },
       {
-        column1: 'License',
+        column1: 'ManufacturersModelName',
         column2: 'RECOMMENDED',
         column3: 'string',
-        key: "License",
-        title: "The license for the dataset. The use of license name abbreviations is RECOMMENDED for specifying a license (see Licenses). The corresponding full license text MAY be specified in an additional LICENSE file.",
+        key: "ManufacturersModelName",
+        title: "Manufacturer's model name of the equipment that produced the measurements. See the MEG Systems Appendix for preferred names.",
         type: "text"
       },
       {
-        column1: 'Authors',
+        column1: 'SoftwareVersions',
         column2: 'RECOMMENDED',
         column3: 'array of strings',
-        key: "Authors",
-        title: "List of individuals who contributed to the creation/curation of the dataset.",
+        key: "SoftwareVersions",
+        title: "Manufacturer's designation of software version of the equipment that produced the measurements.",
         type: "text"
       },
       {
-        column1: 'Acknowledgements',
-        column2: 'OPTIONAL',
+        column1: 'TaskDescription',
+        column2: 'RECOMMENDED',
         column3: 'string',
-        key: "Acknowledgements",
-        title: "Text acknowledging contributions of individuals or institutions beyond those listed in Authors or Funding.",
+        key: "TaskDescription",
+        title: "Longer description of the task.",
         type: "text"
       },
       {
-        column1: 'HowToAcknowledge',
-        column2: 'OPTIONAL',
+        column1: 'Instructions',
+        column2: 'RECOMMENDED',
         column3: 'string',
-        key: "HowToAcknowledge",
-        title: "Text containing instructions on how researchers using this dataset should acknowledge the original authors. This field can also be used to define a publication that should be cited in publications that use the dataset.",
+        key: "Instructions",
+        title: "Text of the instructions given to participants before the recording. This is especially important in context of resting state recordings and distinguishing between eyes open and eyes closed paradigms.",
         type: "text"
       },
       {
-        column1: 'Funding',
-        column2: 'OPTIONAL',
-        column3: 'array of strings',
-        key: "Funding",
-        title: "List of sources of funding (grant numbers).",
+        column1: 'CogAtlasID',
+        column2: 'RECOMMENDED',
+        column3: 'string',
+        key: "CogAtlasID",
+        title: "URI of the corresponding Cognitive Atlas Task term.",
         type: "text"
       },
       {
-        column1: 'EthicsApprovals',
-        column2: 'OPTIONAL',
+        column1: 'CogPOID',
+        column2: 'RECOMMENDED',
         column3: 'array of strings',
         key: "EthicsApprovals",
         title: "List of ethics committee approvals of the research protocols and/or protocol identifiers.",
         type: "text"
       },
       {
-        column1: 'ReferencesAndLinks',
-        column2: 'OPTIONAL',
-        column3: 'array of strings',
-        key: "ReferencesAndLinks",
-        title: "List of references to publications that contain information on the dataset. A reference may be textual or a URI.",
-        type: "text"
-      },
-      {
-        column1: 'DatasetDOI',
-        column2: 'OPTIONAL',
+        column1: 'DeviceSerialNumber',
+        column2: 'RECOMMENDED',
         column3: 'string',
-        key: "DatasetDOI",
-        title: "The Digital Object Identifier of the dataset (not the corresponding paper). DOIs SHOULD be expressed as a valid URI; bare DOIs such as 10.0.2.3/dfjj.10 are DEPRECATED.",
+        key: "DeviceSerialNumber",
+        title: "The serial number of the equipment that produced the measurements. A pseudonym can also be used to prevent the equipment from being identifiable, so long as each pseudonym is unique within the dataset.",
         type: "text"
       },
       {
-        column1: 'GeneratedBy',
-        column2: 'RECOMMENDED',
-        column3: 'array of objects',
-        key: "GeneratedBy",
-        title: "Used to specify provenance of the dataset.",
+        column1: 'SamplingFrequency',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SamplingFrequency",
+        title: "Sampling frequency (in Hz) of all the data in the recording, regardless of their type (for example, 2400). The sampling frequency of data channels that deviate from the main sampling frequency SHOULD be specified in the channels.tsv file.",
         type: "text"
       },
       {
+        column1: 'PowerLineFrequency',
+        column2: 'REQUIRED',
+        column3: 'number or "n/a"',
+        key: "PowerLineFrequency",
+        title: "Frequency (in Hz) of the power grid at the geographical location of the instrument (for example, 50 or 60).",
+        type: "text"
+      },
+      {
+        column1: 'DewarPosition',
+        column2: 'REQUIRED',
+        column3: 'string',
+        key: "DewarPosition",
+        title: "Position of the dewar during the MEG scan: 'upright', 'supine' or 'degrees' of angle from vertical: for example on CTF systems, 'upright=15°, supine=90°'.",
+        type: "text"
+      },
+      {
+        column1: 'SoftwareFilters',
+        column2: 'REQUIRED',
+        column3: 'object of objects or "n/a"',
+        key: "SoftwareFilters",
+        title: 'Object of temporal software filters applied, or "n/a" if the data is not available. Each key-value pair in the JSON object is a name of the filter and an object in which its parameters are defined as key-value pairs (for example, {"Anti-aliasing filter": {"half-amplitude cutoff (Hz)": 500, "Roll-off": "6dB/Octave"}}).',
+        type: "text"
+      },{
         column1: 'SourceDatasets',
-        column2: 'RECOMMENDED',
-        column3: 'array of objects',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },{
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },{
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
         key: "SourceDatasets",
         title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
         type: "text"
@@ -197,4 +226,31 @@ filterForm: FormGroup;
       ReferencesAndLinksControl.setValue(ReferencesAndLinks);
     }
   }
+
+  download() {
+    // Get the form data as a JSON object
+    const formData = this.filterForm.value;
+  
+    // Convert the form data to a string
+    const dataString = JSON.stringify(formData, null, 2);
+  
+    // Create a new blob with the data
+    const blob = new Blob([dataString], { type: 'application/json' });
+  
+    // Create a URL for the blob
+    const url = window.URL.createObjectURL(blob);
+  
+    // Create a new anchor element with the URL
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = '_meg.json';
+  
+    // Trigger a click on the anchor element
+    document.body.appendChild(a);
+    a.click();
+  
+    // Clean up the anchor element and URL object
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+  }  
 }
