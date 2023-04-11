@@ -143,21 +143,80 @@ filterForm: FormGroup;
         key: "SoftwareFilters",
         title: 'Object of temporal software filters applied, or "n/a" if the data is not available. Each key-value pair in the JSON object is a name of the filter and an object in which its parameters are defined as key-value pairs (for example, {"Anti-aliasing filter": {"half-amplitude cutoff (Hz)": 500, "Roll-off": "6dB/Octave"}}).',
         type: "text"
-      },{
+      },
+      {
+        column1: 'DigitizedLandmarks',
+        column2: 'REQUIRED',
+        column3: 'boolean',
+        key: "DigitizedLandmarks",
+        title: 'true or false value indicating whether anatomical landmark points (fiducials) are contained within this recording.Must be one of: "true", "false".',
+        type: "text"
+      },
+      {
+        column1: 'DigitizedHeadPoints',
+        column2: 'REQUIRED',
+        column3: 'boolean',
+        key: "DigitizedHeadPoints",
+        title: 'true or false value indicating whether head points outlining the scalp/face surface are contained within this recording. Must be one of: "true", "false".',
+        type: "text"
+      },
+      {
+        column1: 'MEGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },
+      {
         column1: 'SourceDatasets',
         column2: 'REQUIRED',
         column3: 'number',
         key: "SourceDatasets",
         title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
         type: "text"
-      },{
+      },
+      {
         column1: 'SourceDatasets',
         column2: 'REQUIRED',
         column3: 'number',
         key: "SourceDatasets",
         title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
         type: "text"
-      },{
+      },
+      {
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },
+      {
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },
+      {
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },
+      {
+        column1: 'SourceDatasets',
+        column2: 'REQUIRED',
+        column3: 'number',
+        key: "SourceDatasets",
+        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        type: "text"
+      },
+      {
         column1: 'SourceDatasets',
         column2: 'REQUIRED',
         column3: 'number',
