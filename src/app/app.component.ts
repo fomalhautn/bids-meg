@@ -164,64 +164,232 @@ filterForm: FormGroup;
         column1: 'MEGChannelCount',
         column2: 'RECOMMENDED',
         column3: 'number',
-        key: "SourceDatasets",
+        key: "MEGChannelCount",
         title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'MEGREFChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "MEGREFChannelCount",
+        title: "Number of MEG reference channels (for example, 23). For systems without such channels (for example, Neuromag Vectorview), MEGREFChannelCount should be set to 0.Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'EEGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EEGChannelCount",
+        title: "Number of EEG channels recorded simultaneously (for example, 21).Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'ECOGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "ECOGChannelCount",
+        title: "Number of ECoG channels.Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'SEEGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "SEEGChannelCount",
+        title: "Number of SEEG channels.Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'EOGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EOGChannelCount",
+        title: "Number of EOG channels. Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
-        column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        column1: 'ECGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "ECGChannelCount",
+        title: "Number of ECG channels. Must be a number greater than or equal to 0.",
         type: "text"
       },
       {
-        column1: 'SourceDatasets',
-        column2: 'REQUIRED',
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'EMGChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'MiscChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "MiscChannelCount",
+        title: "Number of miscellaneous analog channels for auxiliary signals. Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'TriggerChannelCount',
+        column2: 'RECOMMENDED',
+        column3: 'integer',
+        key: "EMGChannelCount",
+        title: "Number of channels for digital (TTL bit level) triggers.Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'RecordingDuration',
+        column2: 'RECOMMENDED',
         column3: 'number',
-        key: "SourceDatasets",
-        title: "Used to specify the locations and relevant attributes of all source datasets. Valid keys in each object include 'URL', 'DOI' (see URI), and 'Version' with string values.",
+        key: "RecordingDuration",
+        title: "Length of the recording in seconds (for example, 3600).",
+        type: "text"
+      },
+      {
+        column1: 'RecordingType',
+        column2: 'RECOMMENDED',
+        column3: 'string',
+        key: "RecordingType",
+        title: 'Defines whether the recording is "continuous", "discontinuous", or "epoched", where "epoched" is limited to time windows about events of interest (for example, stimulus presentations or subject responses).Must be one of: "continuous", "epoched", "discontinuous".',
+        type: "text"
+      },
+      {
+        column1: 'EpochLength',
+        column2: 'RECOMMENDED',
+        column3: 'number',
+        key: "EpochLength",
+        title: "Duration of individual epochs in seconds (for example, 1) in case of epoched data. If recording was continuous or discontinuous, leave out the field.Must be a number greater than or equal to 0.",
+        type: "text"
+      },
+      {
+        column1: 'ContinuousHeadLocalization',
+        column2: 'RECOMMENDED',
+        column3: 'number or array of numbers',
+        key: "ContinuousHeadLocalization",
+        title: "List of frequencies (in Hz) used by the head localisation coils ('HLC' in CTF systems, 'HPI' in Elekta, 'COH' in BTi/4D) that track the subject's head position in the MEG helmet (for example, [293, 307, 314, 321]).",
+        type: "text"
+      },
+      {
+        column1: 'MaxMovement',
+        column2: 'RECOMMENDED',
+        column3: 'number',
+        key: "MaxMovement",
+        title: "Maximum head movement (in mm) detected during the recording, as measured by the head localisation coils (for example, 4.8).",
+        type: "text"
+      },
+      {
+        column1: 'SubjectArtefactDescription',
+        column2: 'RECOMMENDED',
+        column3: 'string',
+        key: "SubjectArtefactDescription",
+        title: 'Freeform description of the observed subject artefact and its possible cause (for example, "Vagus Nerve Stimulator", "non-removable implant"). If this field is set to "n/a", it will be interpreted as absence of major source of artifacts except cardiac and blinks.',
+        type: "text"
+      },
+      {
+        column1: 'AssociatedEmptyRoom',
+        column2: 'RECOMMENDED',
+        column3: 'array or string',
+        key: "AssociatedEmptyRoom",
+        title: "One or more BIDS URIs pointing to empty-room file(s) associated with the subject's MEG recording. Using forward-slash separated paths relative to the dataset root is DEPRECATED",
+        type: "text"
+      },
+      {
+        column1: 'HardwareFilters',
+        column2: 'RECOMMENDED',
+        column3: 'object of objects or "n/a"',
+        key: "HardwareFilters",
+        title: 'Object of temporal hardware filters applied, or "n/a" if the data is not available. Each key-value pair in the JSON object is a name of the filter and an object in which its parameters are defined as key-value pairs. For example, {"Highpass RC filter": {"Half amplitude cutoff (Hz)": 0.0159, "Roll-off": "6dB/Octave"}}.',
+        type: "text"
+      },
+      {
+        column1: 'EEGPlacementScheme',
+        column2: 'OPTIONAL',
+        column3: 'string',
+        key: "EEGPlacementScheme",
+        title: 'Placement scheme of EEG electrodes. Either the name of a standardized placement system (for example, "10-20") or a list of standardized electrode names (for example, ["Cz", "Pz"]).',
+        type: "text"
+      },
+      {
+        column1: 'CapManufacturer',
+        column2: 'OPTIONAL',
+        column3: 'string',
+        key: "CapManufacturer",
+        title: 'Name of the cap manufacturer (for example, "EasyCap").',
+        type: "text"
+      },
+      {
+        column1: 'CapManufacturersModelName',
+        column2: 'OPTIONAL',
+        column3: 'string',
+        key: "CapManufacturersModelName",
+        title: 'Manufacturer designation of the cap model (for example, "actiCAP 64 Ch Standard-2").',
+        type: "text"
+      },
+      {
+        column1: 'EEGReference',
+        column2: 'OPTIONAL',
+        column3: 'string',
+        key: "EEGReference",
+        title: 'General description of the reference scheme used and (when applicable) of location of the reference electrode in the raw recordings (for example, "left mastoid", "Cz", "CMS"). If different channels have a different reference, this field should have a general description and the channel specific reference should be defined in the channels.tsv file.',
         type: "text"
       },
     ];
