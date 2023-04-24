@@ -225,62 +225,6 @@ filterForm: FormGroup;
         type: "text"
       },
       {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
-        column1: 'EMGChannelCount',
-        column2: 'RECOMMENDED',
-        column3: 'integer',
-        key: "EMGChannelCount",
-        title: "Number of EMG channels. Must be a number greater than or equal to 0.",
-        type: "text"
-      },
-      {
         column1: 'MiscChannelCount',
         column2: 'RECOMMENDED',
         column3: 'integer',
