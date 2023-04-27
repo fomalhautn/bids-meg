@@ -22,6 +22,7 @@ filterForm: FormGroup;
         column3: 'string',
         key: "TaskName",
         title: "Name of the task. No two tasks should have the same name. The task label included in the file name is derived from this 'TaskName' field by removing all non-alphanumeric characters (that is, all except those matching [0-9a-zA-Z]). For example 'TaskName' 'faces n-back' will correspond to task label facesnback. A RECOMMENDED convention is to name resting state task using labels beginning with rest.",
+        column6: "TaskName",
         type: "text"
       },
       {
@@ -29,15 +30,16 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'string',
         key: "InstitutionName",
-        title: "The name of the institution in charge of the equipment that produced the measurements.",
-        type: "text"
+        title: "Karolinska  Institute (copy and insert into the input field). The name of the institution in charge of the equipment that produced the measurements.",
+        type: "text",
+      
       },
       {
         column1: 'InstitutionAddress',
         column2: 'RECOMMENDED',
         column3: 'string or array of strings',
         key: "InstitutionAddress",
-        title: "The address of the institution in charge of the equipment that produced the measurements.",
+        title: "Nobels väg 9, 171 77, Stockholm, Sweden              (copy and insert into the input field) The address of the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
@@ -45,7 +47,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'object of string',
         key: "InstitutionalDepartmentName",
-        title: "The department in the institution in charge of the equipment that produced the measurements.",
+        title: "Department of Clinical Neuroscience (copy and insert into the input field)                        The department in the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
@@ -53,7 +55,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'string',
         key: "Manufacturer",
-        title: "Manufacturer of the equipment that produced the measurements. For MEG scanners, this must be one of: 'CTF', 'Elekta/Neuromag', 'BTi/4D', 'KIT/Yokogawa', 'ITAB', 'KRISS', 'Other'. See the MEG Systems Appendix for preferred names.",
+        title: "Neuromag/Elekta/Megin (copy and insert into the input field).          Manufacturer of the equipment that produced the measurements. For MEG scanners, this must be one of: 'CTF', 'Elekta/Neuromag', 'BTi/4D', 'KIT/Yokogawa', 'ITAB', 'KRISS', 'Other'. See the MEG Systems Appendix for preferred names.",
         type: "text"
       },
       {
@@ -61,7 +63,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'string',
         key: "ManufacturersModelName",
-        title: "Manufacturer's model name of the equipment that produced the measurements. See the MEG Systems Appendix for preferred names.",
+        title: "ElektaTRIUX (copy and insert into the input field) Manufacturer's model name of the equipment that produced the measurements. See the MEG Systems Appendix for preferred names.",
         type: "text"
       },
       {
@@ -69,7 +71,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'array of strings',
         key: "SoftwareVersions",
-        title: "Manufacturer's designation of software version of the equipment that produced the measurements.",
+        title: "??????Manufacturer's designation of software version of the equipment that produced the measurements.",
         type: "text"
       },
       {
@@ -109,7 +111,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'string',
         key: "DeviceSerialNumber",
-        title: "The serial number of the equipment that produced the measurements. A pseudonym can also be used to prevent the equipment from being identifiable, so long as each pseudonym is unique within the dataset.",
+        title: "????The serial number of the equipment that produced the measurements. A pseudonym can also be used to prevent the equipment from being identifiable, so long as each pseudonym is unique within the dataset.",
         type: "text"
       },
       {
@@ -117,7 +119,7 @@ filterForm: FormGroup;
         column2: 'REQUIRED',
         column3: 'number',
         key: "SamplingFrequency",
-        title: "Sampling frequency (in Hz) of all the data in the recording, regardless of their type (for example, 2400). The sampling frequency of data channels that deviate from the main sampling frequency SHOULD be specified in the channels.tsv file.",
+        title: "??1000(copy and insert into the input field). Sampling frequency (in Hz) of all the data in the recording, regardless of their type (for example, 2400). The sampling frequency of data channels that deviate from the main sampling frequency SHOULD be specified in the channels.tsv file.",
         type: "text"
       },
       {
@@ -125,7 +127,7 @@ filterForm: FormGroup;
         column2: 'REQUIRED',
         column3: 'number or "n/a"',
         key: "PowerLineFrequency",
-        title: "Frequency (in Hz) of the power grid at the geographical location of the instrument (for example, 50 or 60).",
+        title: "??Frequency (in Hz) of the power grid at the geographical location of the instrument (for example, 50 or 60).",
         type: "text"
       },
       {
@@ -337,6 +339,8 @@ filterForm: FormGroup;
         type: "text"
       },
     ];
+
+    
 
     this.filterForm = this.generateFilterForm();
     this.filterForm.get('Authors').valueChanges.subscribe(() => {
