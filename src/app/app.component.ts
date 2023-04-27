@@ -47,7 +47,7 @@ filterForm: FormGroup;
         column2: 'RECOMMENDED',
         column3: 'object of string',
         key: "InstitutionalDepartmentName",
-        title: "Department of Clinical Neuroscience (copy and insert into the input field)                        The department in the institution in charge of the equipment that produced the measurements.",
+        title: "Department of Clinical Neuroscience (copy and insert into the input field)                         The department in the institution in charge of the equipment that produced the measurements.",
         type: "text"
       },
       {
